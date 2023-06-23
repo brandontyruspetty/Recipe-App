@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+  <title>RecipeApp Login</title>
+  <meta name="viewport" content="width=device-width, inital-scale=1">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'recipes/styles.css' %}">
+  <style type="text/css">
+    body {
+      background: url("{% static 'recipes/images/recipe_welcome.jpeg' %}") no-repeat fixed;
+            background-size: cover;
+        } 
+  </style>
+</head>
+
+<body>
+  <div class="auth_modal">
+    <h1>Login</h1>
+
+     {% if error_messsage %}
+      <div id="error_login">
+       {{error_message}}
+     </div>
+      {% endif %}
+  
+  
+    <form action="" method="POST">
+      {% csrf_token %}
+     <div class="form_input">
+        {{form}}
+      </div>
+      <button type="submit" class="login_btn">Login</button>
+    </form>
+  </div>
+</body>
+
+</html>

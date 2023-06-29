@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>
+        Recipe-App Home
+      </title>
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+  {% load static %}
+  
+    <style type="text/css">
+    body {
+      background: url("{% static 'recipes/images/recipe_welcome.jpeg' %}") no-repeat fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30vh;
+    }
+
+    h1,
+    h3 {
+      color: rgb(7, 120, 90);
+      font-family: 'Roboto Mono', 'Calibri', 'Trebuchet MS', sans serif;
+    }
+      img {
+      border-radius: 15px;
+    }
+
+    </style>
+  </head>
+  
+
+<body>
+    <h1 style="text-align:center">Welcome to the Recipe App</h1> 
+    <h3>Log in for list of recipes</h3>
+    <a href="{%url 'login' %}" class="login_btn">Login</a>  
+</body>
+
+</html>
